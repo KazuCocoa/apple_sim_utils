@@ -21,9 +21,11 @@ Or install it yourself as:
 ## Usage
 
 ```
-$ cmd = AppleSimUtils::Cmd.new
-$ cmd.run "--simulator 'iPhone SE'  --restartSB"
+$ cmd = AppleSimUtils::Cmd.new(bundle_id: 'com.apple.example')
+$ cmd.allow_all(device: 'iPhone SE, OS = 10.3', permissions: %w(notifications photos camera))
 ```
+
+See test/apple_sim_utils_test.rb for more details.
 
 ## Development
 
